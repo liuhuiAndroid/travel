@@ -1,23 +1,21 @@
+// 单文件组件
+// 组件的模板
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <!-- <img src="./assets/logo.png"> -->
+    <!-- 显示的是当前路由 地址所对应的内容 -->
     <router-view/>
   </div>
 </template>
 
+// 组件的逻辑
 <script>
 export default {
   name: 'App'
 }
 </script>
 
+// 组件的CSS样式
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
