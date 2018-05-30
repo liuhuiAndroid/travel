@@ -4,9 +4,11 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 // 基础样式的修饰，保证所有浏览器显示的所有效果一致
-import './assets/styles/reset.css'
+import 'styles/reset.css'
 // 1px边框解决方案
-import './assets/styles/border.css'
+import 'styles/border.css'
+// 引入iconfont
+import 'styles/iconfont.css'
 // click事件延迟300毫秒issue解决方案
 // npm install fastclick --save
 import fastClick from 'fastclick'
