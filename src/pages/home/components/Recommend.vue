@@ -4,7 +4,7 @@
             热销推荐
         </div>
         <ul>
-            <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+            <li class="item border-bottom" v-for="item of list" :key="item.id">
                 <img class="item-img" :src='item.imgUrl'/>
                 <div class="item-info">
                     <p class="item-title">{{item.title}}</p>
@@ -18,70 +18,63 @@
 
 <script>
 export default {
-    name: 'HomeRecommend',
-    data () {
-        return {
-            recommendList: [{
-                id: '0001',
-                imgUrl: 'http://img1.qunarzz.com/sight/p0/1506/30/7a528fae12c17e6e29d5d13a9d9813ee.water.jpg_200x200_e7f0d0ad.jpg',
-                title: '上海必游TOP10',
-                desc: '中西合璧，现代和传统各有各的精彩'
-            },{
-                id: '0002',
-                imgUrl: 'http://img1.qunarzz.com/sight/p0/1506/30/7a528fae12c17e6e29d5d13a9d9813ee.water.jpg_200x200_e7f0d0ad.jpg',
-                title: '上海必游TOP10',
-                desc: '中西合璧，现代和传统各有各的精彩'
-            },{
-                id: '0003',
-                imgUrl: 'http://img1.qunarzz.com/sight/p0/1506/30/7a528fae12c17e6e29d5d13a9d9813ee.water.jpg_200x200_e7f0d0ad.jpg',
-                title: '上海必游TOP10',
-                desc: '中西合璧，现代和传统各有各的精彩'
-            }]
-        }
-    }
+  name: 'HomeRecommend',
+  props: {
+    list: Array
+  },
+  data () {
+    return {}
+  }
 }
 </script>
 
 <style lang="stylus" scoped>
-    @import '~styles/mixins.styl';
-    .title{
-        margin-top: .2rem
-        line-height: .8rem
-        background: #eee
-        text-text-indent: .2rem
-        padding-left: .2rem
+@import '~styles/mixins.styl';
+
+.title {
+    margin-top: 0.2rem;
+    line-height: 0.8rem;
+    background: #eee;
+    text-text-indent: 0.2rem;
+    padding-left: 0.2rem;
+}
+
+.item {
+    overflow: hidden;
+    display: flex;
+    height: 1.9rem;
+
+    .item-img {
+        width: 1.7rem;
+        height: 1.7rem;
+        padding: 0.1rem;
     }
-    .item{
-        overflow: hidden
-        display: flex
-        height: 1.9rem
-        .item-img{
-            width: 1.7rem
-            height: 1.7rem
-            padding: .1rem
+
+    .item-info {
+        flex: 1;
+        padding: 0.1rem;
+        min-width: 0;
+
+        .item-title {
+            line-height: 0.54rem;
+            font-size: 0.32rem;
+            ellipsis();
         }
-        .item-info{
-            flex: 1
-            padding: .1rem
-            min-width: 0
-            .item-title{
-                line-height: .54rem
-                font-size : .32rem
-                ellipsis()
-            }
-            .item-desc{
-                line-height: .4rem
-                color: #ccc
-                ellipsis()
-            }
-            .item-button{
-                line-height: .44rem
-                margin-top: .16rem
-                background: #ff9300
-                padding: 0 .2rem
-                border-radius: .06rem
-                color: #fff
-            }
+
+        .item-desc {
+            line-height: 0.4rem;
+            color: #ccc;
+            ellipsis();
+        }
+
+        .item-button {
+            line-height: 0.44rem;
+            margin-top: 0.16rem;
+            background: #ff9300;
+            padding: 0 0.2rem;
+            border-radius: 0.06rem;
+            color: #fff;
         }
     }
+}
 </style>
