@@ -19,8 +19,8 @@ export default {
 .header {
     position: relative;
     overflow: hidden;
-    height: 0.86rem;
-    line-height: 0.86rem;
+    height: $headerHeight;
+    line-height: $headerHeight;
     text-align: center;
     color: #fff;
     background: $bgColor;
@@ -33,7 +33,7 @@ export default {
         width: 0.64rem;
         text-align: center;
         font-size: 0.4rem;
-        color: #fff
+        color: #fff;
     }
 }
 </style>
