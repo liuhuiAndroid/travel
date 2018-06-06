@@ -15,14 +15,14 @@ export default {
 
 .search {
     height: 0.72rem;
-    padding: 0 .1rem;
+    padding: 0 0.1rem;
     background: $bgColor;
 
     .search-input {
         box-sizing: border-box;
         width: 100%;
-        height: .62rem;
-        padding: 0 .1rem;
+        height: 0.62rem;
+        padding: 0 0.1rem;
         line-height: 0.62rem;
         text-align: center;
         border-radius: 0.06rem;
