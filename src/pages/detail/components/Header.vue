@@ -36,11 +36,13 @@ export default {
       } else {
         this.showAbs = true
       }
-      console.log(document.body.scrollTop)
     }
   },
   activated () {
     window.addEventListener('scroll', this.handleScroll)
+  },
+  deactivated () {
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
