@@ -3,7 +3,7 @@
         <detail-banner></detail-banner>
         <detail-header></detail-header>
         <div class="content">
-
+          <detail-list :list="list"></detail-list>
         </div>
     </div>
 </template>
@@ -11,14 +11,39 @@
 <script>
 import DetailBanner from './components/Banner'
 import DetailHeader from './components/Header'
+import DetailList from './components/List'
 export default {
   name: 'Detail',
   components: {
     DetailBanner,
-    DetailHeader
+    DetailHeader,
+    DetailList
   },
   data () {
     return {
+      list: [{
+        title: '成人票',
+        children: [{
+          title: '成人一号联票',
+          children: [{
+            title: '成人一号连锁店一门'
+          }, {
+            title: '成人一号连锁店二门'
+          }, {
+            title: '成人一号连锁店三门'
+          }]
+        }, {
+          title: '成人二号联票'
+        }, {
+          title: '成人三号联票'
+        }]
+      }, {
+        title: '学生票'
+      }, {
+        title: '儿童票'
+      }, {
+        title: '特惠票'
+      }]
     }
   }
 }
