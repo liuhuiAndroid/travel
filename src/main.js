@@ -7,6 +7,7 @@ import router from './router'
 // npm install fastclick --save
 import fastClick from 'fastclick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'babel-polyfill'
 import store from './store'
 // 基础样式的修饰，保证所有浏览器显示的所有效果一致
 import 'styles/reset.css'
